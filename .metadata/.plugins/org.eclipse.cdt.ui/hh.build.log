@@ -1,0 +1,40 @@
+08:51:46 **** Incremental Build of configuration Debug for project hh ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: hh.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,hh.map -mmcu=atmega328p -o "hh.elf"  ./DIO_program.o ./LCD_program.o ./main.o   
+Finished building target: hh.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S hh.elf  >"hh.lss"
+Finished building: hh.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex hh.elf  "hh.hex"
+Finished building: hh.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p hh.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    8074 bytes (24.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+08:51:47 Build Finished. 0 errors, 1 warnings. (took 526ms)
+

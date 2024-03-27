@@ -1,0 +1,10 @@
+GIE_PROG.o GIE_PROG.o: ../GIE_PROG.c ../BIT_MATH.h ../STD_TYPES.h \
+  ../GIE_PRIVATE.h ../GIE_INTERFACE.h
+
+../BIT_MATH.h:
+
+../STD_TYPES.h:
+
+../GIE_PRIVATE.h:
+
+../GIE_INTERFACE.h:

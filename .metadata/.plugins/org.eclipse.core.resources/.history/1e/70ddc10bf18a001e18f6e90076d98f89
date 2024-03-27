@@ -1,0 +1,16 @@
+/**
+ * seg.c
+ *
+ *  Created on: Nov 24, 2023
+ *      Author: Dell
+ */
+#include "seg.h"
+void seg_display (void)
+{
+	for(int i =0;i<=9;i++)
+		{
+				PORTD = num[i];
+				_delay_ms(1000);
+		}
+}
+

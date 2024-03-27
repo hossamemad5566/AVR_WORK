@@ -1,0 +1,41 @@
+14:37:40 **** Incremental Build of configuration Debug for project projectTwo ****
+make all 
+Building file: ../c_prog/app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"c_prog/app.d" -MT"c_prog/app.o" -c -o "c_prog/app.o" "../c_prog/app.c"
+In file included from ../c_prog/app.h:9,
+                 from ../c_prog/app.c:10:
+d:/01_embedded/avr/tooling/sdk_win_64/sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../c_prog/app.c
+ 
+Building target: projectTwo.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,projectTwo.map -mmcu=atmega328p -o "projectTwo.elf"  ./c_prog/app.o ./c_prog/seg.o   
+Finished building target: projectTwo.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S projectTwo.elf  >"projectTwo.lss"
+Finished building: projectTwo.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex projectTwo.elf  "projectTwo.hex"
+Finished building: projectTwo.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p projectTwo.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    3358 bytes (10.2% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+14:37:41 Build Finished (took 731ms)
+

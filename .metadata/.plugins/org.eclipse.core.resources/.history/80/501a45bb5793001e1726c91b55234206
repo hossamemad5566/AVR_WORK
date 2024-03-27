@@ -1,0 +1,49 @@
+/*********************************************************
+ * @name : Hossam Emad
+ * @date : 1/12/2023
+ * @swc: LCD 16*2
+ * @version : V1.0
+ * @description :
+*********************************************************//*lib layer */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include <util/delay.h>
+
+/*MCAL layer*/
+#include "DIO_interface.h"
+#include "DIO_config.h"
+
+/*HAL layer*/
+#include "LCD_interface.h"
+#include "LCD_config.h"
+#include "LCD_private.h"
+
+int main(void)
+ {
+	/*DIO init */
+	DIO_voidInit();
+	/*LCD init*/
+	LCD_voidInit();
+
+	/*local variables */
+	u8 Local_Au8String[]= "Emad Mohamed"
+
+	/*display name */
+	LCD_voidWriteChar('H');
+	LCD_voidWriteChar('o');
+	LCD_voidWriteChar('s');
+	LCD_voidWriteChar('s');
+	LCD_voidWriteChar('a');
+	LCD_voidWriteChar('m');
+	LCD_voidWriteString (Local_Au8String);
+	while(1)
+	{
+		DIO_u8SetPinValue(DIO_u8_PORTB,DIO_u8_PIN5,DIO_u8_HIGH);
+		_delay_ms(2000);
+		DIO_u8SetPinValue(DIO_u8_PORTB,DIO_u8_PIN5,DIO_u8_LOW);
+		_delay_ms(1000);
+	}
+ 	 return 0;
+ }
+
+

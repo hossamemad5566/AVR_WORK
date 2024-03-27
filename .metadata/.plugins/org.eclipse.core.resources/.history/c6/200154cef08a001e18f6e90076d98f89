@@ -1,0 +1,51 @@
+/*
+ * seg.h
+ *
+ *  Created on: Nov 24, 2023
+ *      Author: Dell
+ */
+
+#ifndef _SEG_H_
+#define _SEG_H_
+/* inclision */
+#include "seg.h"
+
+#include "app.h"
+
+/*macros definitions*/
+
+/*numbers for 7segment common anode and common cathode
+ *just choose type in if line*/
+
+#define COM_ANODE 1
+#define COM_CATHODE 2
+#define SEG_TYPE (COM_CATHODE)
+
+#if(SEG_TYPE == COM_ANODE)
+#define ZERO  0b11000000
+#define ONE   0b11111001
+#define TWO   0b10100100
+#define THREE 0b10100100
+#define FOUR  0b10011000
+#define FIVE  0b10010010
+#define SIX   0b10000010
+#define SEVEN 0b11111000
+#define EIGHT 0b10000000
+#define NINE  0b10010000
+
+#elif(SEG_TYPE == COM_CATHODE)
+#define ZERO  0b00111111
+#define ONE   0b00000110
+#define TWO   0b01011011
+#define THREE 0b01001111
+#define FOUR  0b01100111
+#define FIVE  0b01101101
+#define SIX   0b01111101
+#define SEVEN 0b00000111
+#define EIGHT 0b01111111
+#define NINE  0b01101111
+#endif
+
+
+
+#endif /* 7SEG_H_ */

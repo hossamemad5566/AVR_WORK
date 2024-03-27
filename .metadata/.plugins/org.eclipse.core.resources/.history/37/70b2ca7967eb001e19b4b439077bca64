@@ -1,0 +1,48 @@
+#include "main.h"
+
+
+
+
+
+void setup (void)
+{
+    H_Lcd_Void_LCDInit();
+    H_LED_Void_LedInit(LED_GRN);
+    H_LED_Void_LedInit(LED_YEL);
+    FP_intit();
+    
+}
+
+int main(void)
+{
+	setup();
+
+    u8 x=1;
+    /*1- gen img*/
+    while(x!=0)
+    {
+        x = FingerPS_genImg();
+        FingerPS_Auraked(BREATHING,0xAA,BLUE,1);
+    }
+    H_Lcd_Void_LCDGoTo(0,0);
+    H_Lcd_Void_LCDWriteString("First img generated");
+    
+    /*2-while */
+    H_Lcd_Void_LCDWriteNumber(x);
+    if(x==0)
+    {
+        H_Lcd_Void_LCDWriteCharacter('k');
+    }
+    else
+    {
+        H_Lcd_Void_LCDWriteCharacter('N');
+    }
+    while(1)
+    {
+        
+        
+
+    }
+}
+
+

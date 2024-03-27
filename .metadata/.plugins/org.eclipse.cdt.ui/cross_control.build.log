@@ -1,0 +1,79 @@
+09:30:59 **** Incremental Build of configuration Debug for project cross_control ****
+make all 
+Building file: ../app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"app.d" -MT"app.o" -c -o "app.o" "../app.c"
+In file included from ../app.h:16,
+                 from ../app.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../app.c: In function 'setup':
+../app.c:76: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:80: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:82: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c: In function 'distanceDisp':
+../app.c:173: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c: In function 'LCD_pageFlip':
+../app.c:221: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:223: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c: In function 'BAS':
+../app.c:259: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:262: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:264: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c: In function 'CCS_operating':
+../app.c:301: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:304: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:306: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c: In function 'CCS_States':
+../app.c:350: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:353: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:355: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c: In function 'speed_limiter':
+../app.c:585: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:592: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:597: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:608: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:612: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c: In function 'LCD_Write_Speed':
+../app.c:624: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:635: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:640: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:647: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c: In function 'ADC_u16Mapping_mm':
+../app.c:667: warning: implicit declaration of function 'abs'
+../app.c: In function 'Void_Write_Time':
+../app.c:718: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:722: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../app.c:725: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../app.c
+ 
+Building target: cross_control.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,cross_control.map -mmcu=atmega32 -o "cross_control.elf"  ./ADC_Prog.o ./Buzzer_Prog.o ./DIO_Prog.o ./EXTINT_Prog.o ./GIE_prog.o ./Keypad_Prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Prog.o ./Relay.o ./Timer_Prog.o ./app.o   
+Finished building target: cross_control.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S cross_control.elf  >"cross_control.lss"
+Finished building: cross_control.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex cross_control.elf  "cross_control.hex"
+Finished building: cross_control.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 cross_control.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   19280 bytes (58.8% Full)
+(.text + .data + .bootloader)
+
+Data:        449 bytes (21.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+09:31:00 Build Finished. 0 errors, 29 warnings. (took 837ms)
+

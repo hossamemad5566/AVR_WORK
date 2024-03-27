@@ -1,0 +1,83 @@
+/** {
+ ******************************************************************************
+ * @file           : app.c
+ * @author         : Hossam Emad
+ * @brief          : square of three numbers 
+ ******************************************************************************
+ }*/
+
+/* ********************** Includes Section Start ********************** */
+#include "app.h"
+
+#include "seg.h"
+/* ********************** Includes Section End   ********************** */
+
+/* ********************** Macro Section Start ************************* */
+#define COM_ANODE 1
+#define COM_CATHODE 2
+#define SEG_TYPE (COM_ANODE)
+
+#if(SEG_TYPE == COM_ANODE)
+#define ZERO  0b11000000
+#define ONE   0b11111001
+#define TWO   0b10100100
+#define THREE 0b10100100
+#define FOUR  0b10011000
+#define FIVE  0b10010010
+#define SIX   0b10000010
+#define SEVEN 0b11111000
+#define EIGHT 0b10000000
+#define NINE  0b10010000
+
+#elif(SEG_TYPE == COM_CATHODE)
+#define ZERO  0b00111111
+#define ONE   0b00000110
+#define TWO   0b01011011
+#define THREE 0b01001111
+#define FOUR  0b01100111
+#define FIVE  0b01101101
+#define SIX   0b01111101
+#define SEVEN 0b00000111
+#define EIGHT 0b01111111
+#define NINE  0b01101111
+#endif
+/* ********************** Macro Section End   ************************* */
+
+/* ********************** Global Variables Section Start ************** */
+u8 num[10]={ZERO,ONE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE};
+/* ********************** Global Variables  Section End   ************* */
+
+/* ********************** Sub-Program Declerations Section Start ******* */
+
+/* ********************** Sub-Program Declerations Section End ********* */
+
+int main ()
+{
+	/*step one
+	 *Configure PIN0 in PORTA as an output pin */
+	DDRB  =0b11111111;
+	/*super loop*/
+	while(1)
+	{
+		PORTB =0;
+		_delay_ms(100000);
+		PORTB =255;
+		_delay_ms(100000);
+	}
+
+	return 0;
+}
+
+
+/* ********************** Sub-Program Section Start ************* */
+
+
+
+/* ********************** Sub-Program Section End ************* */
+
+/**
+ ******************************************************************************
+ User          Date                 Brief
+ ******************************************************************************
+Hossam Emad     17-11-2023            14 videos
+*/

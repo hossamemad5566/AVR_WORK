@@ -1,0 +1,41 @@
+13:57:43 **** Incremental Build of configuration Debug for project p1 ****
+make all 
+Building file: ../app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"app.d" -MT"app.o" -c -o "app.o" "../app.c"
+In file included from ../app.h:9,
+                 from ../app.c:10:
+d:/01_embedded/avr/tooling/sdk_win_64/sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../app.c
+ 
+Building target: p1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,p1.map -mmcu=atmega328p -o "p1.elf"  ./app.o ./seg.o   
+Finished building target: p1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S p1.elf  >"p1.lss"
+Finished building: p1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex p1.elf  "p1.hex"
+Finished building: p1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p p1.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    3442 bytes (10.5% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:57:44 Build Finished (took 743ms)
+

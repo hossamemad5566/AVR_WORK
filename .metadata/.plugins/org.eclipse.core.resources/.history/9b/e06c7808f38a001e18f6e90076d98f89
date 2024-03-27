@@ -1,0 +1,53 @@
+/** {
+ ******************************************************************************
+ * @file           : app.c
+ * @author         : Hossam Emad
+ * @brief          : square of three numbers 
+ ******************************************************************************
+ }*/
+
+/* ********************** Includes Section Start ********************** */
+#include "app.h"
+
+/* ********************** Includes Section End   ********************** */
+
+/* ********************** Macro Section Start ************************* */
+
+/* ********************** Macro Section End   ************************* */
+
+/* ********************** Global Variables Section Start ************** */
+u8 num[10]={ZERO,ONE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE};
+/* ********************** Global Variables  Section End   ************* */
+
+/* ********************** Sub-Program Declerations Section Start ******* */
+
+/* ********************** Sub-Program Declerations Section End ********* */
+
+int main ()
+{
+	/*step one
+	 *Configure PIN0 in PORTA as an output pin */
+	DDRD  =255;
+	/*super loop*/
+	while(1)
+	{
+		seg_display();
+
+	}
+
+	return 0;
+}
+
+
+/* ********************** Sub-Program Section Start ************* */
+
+
+
+/* ********************** Sub-Program Section End ************* */
+
+/**
+ ******************************************************************************
+ User          Date                 Brief
+ ******************************************************************************
+Hossam Emad     17-11-2023            14 videos
+*/

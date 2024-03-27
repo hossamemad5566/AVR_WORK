@@ -1,0 +1,51 @@
+15:31:53 **** Incremental Build of configuration Debug for project SEG ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../seg_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"seg_prog.d" -MT"seg_prog.o" -c -o "seg_prog.o" "../seg_prog.c"
+In file included from ../seg_prog.c:17:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../seg_prog.c
+ 
+Building target: SEG.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,SEG.map -mmcu=atmega32 -o "SEG.elf"  ./DIO_program.o ./main.o ./seg_prog.o   
+Finished building target: SEG.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S SEG.elf  >"SEG.lss"
+Finished building: SEG.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex SEG.elf  "SEG.hex"
+Finished building: SEG.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex SEG.elf  "SEG.eep"
+Finished building: SEG.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 SEG.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7948 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (12.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:31:53 Build Finished. 0 errors, 2 warnings. (took 654ms)
+

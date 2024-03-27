@@ -1,0 +1,41 @@
+/*************************************
+* @name     : Hossam Emad 
+* @date     : 13/12/2023
+* @SWC      : EXTI external interrupt
+* @version  : 1.0
+***************************************/
+/*Library*/
+#include "BIT_MATH.h"
+#include "STD_TYPES.h"
+#include "util/delay.h"
+/*MCAL*/
+#include "EXIT_interface.h"
+#include "DIO_interface.h"
+
+#define SREG        (*(volatile u8*)0x5F)
+
+/*Prototype for ISR function*/
+void __vector_1(void) __attribute__((signal));
+
+
+int main ()
+{
+    /*Initialize DIO */
+    DIO_voidInit();
+    /*Enable GIE*/
+    SET_BIT(SREG,7);
+    /*Enable EXTI 0 */
+    EXIT_u8EXIT0Enable();
+
+    while(1)
+    {
+
+    }
+
+    return 0;
+}
+
+void __vector_1(void)
+{
+	DIO_u8TogglePin(DIO_u8_PORTB,DIO_u8_PIN5);
+}

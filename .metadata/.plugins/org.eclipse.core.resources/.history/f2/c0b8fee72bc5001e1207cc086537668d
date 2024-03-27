@@ -1,0 +1,84 @@
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+
+#include "UART_private.h"
+#include "UART_config.h"
+#include "UART_interface.h"
+
+
+void UART_voidInit(void)
+{
+    u8 local_u8Temp =0;
+
+    /*set Baud rate :9600*/
+    UART_UBRROL = 103;
+
+    /*normal speed*/
+    //CLR_BIT(local_u8Temp,1);
+    /*this line is because bit 2 , 3 & 4 must be zero when we write to this reg*/
+    UART_UCSROA=local_u8Temp;
+    /*stop bits : 1*/
+    CLR_BIT(UART_UCSROC,3);
+
+    /*data frame : char size 8bit*/
+    SET_BIT(UART_UCSROC,1);
+    SET_BIT(UART_UCSROC,2);
+    CLR_BIT(UART_UCSROB,2);
+
+    /*enable EX and RX*/
+    SET_BIT(UART_UCSROB,3);
+    SET_BIT(UART_UCSROB,4);
+
+    /*select async operation*/
+    CLR_BIT(UART_UCSROC,6);
+    CLR_BIT(UART_UCSROC,7);
+
+    /*disable parity bit*/
+    CLR_BIT(UART_UCSROC,4);
+    CLR_BIT(UART_UCSROC,5);
+    
+    /*enable 2 stop bits*/
+    SET_BIT(UART_UCSROC,3);
+
+}
+
+u8 UART_u8SendByte(u8 Copy_u8DataByte)
+{
+    u8 local_u8ReturnState = STD_TYPE_OK;
+    /*check that TX is empty :  UDRE bit*/
+    while(GET_BIT(UART_UCSROA,5)==0);
+    /*write data to TX reg*/
+    UART_UDRO = Copy_u8DataByte;
+    /*check if transmision is done*/
+    if(GET_BIT(UART_UCSROA,6)) 
+    {
+
+    }
+    else
+    {
+        local_u8ReturnState = STD_TYPE_NOK;
+    }
+    return local_u8ReturnState;
+    
+}
+
+u8 UART_u8ReceiveByte(u8 * Copy_Pu8RecDataByte)
+{
+    u8 local_u8ReturnState = STD_TYPE_OK;
+    if (Copy_Pu8RecDataByte!= NULL)
+    {
+        local_u8ReturnState = STD_TYPE_NOK;
+    }
+    else
+    {
+        /*check that USART Receive Complete :  RXCn bit*/
+        while(GET_BIT(UART_UCSROA,7)==0);
+        
+        /*read the received data*/
+        *Copy_Pu8RecDataByte = UART_UDRO ;
+         
+    }
+    
+
+    return local_u8ReturnState;
+}

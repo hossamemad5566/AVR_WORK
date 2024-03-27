@@ -1,0 +1,57 @@
+/*lib layer */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#define F_CPU 16000000
+#include <util/delay.h>
+
+/*MCAL layer*/
+#include "DIO_interface.h"
+/*HAL layer*/
+#include "LCD_interface.h"
+#include "LCD_config.h"
+#include "LCD_private.h"
+
+void LCD_voidWriteCmnd(u8 Copy_u8Cmnd)
+{
+    /* 1- RS pin =0 */
+    DIO_u8SetPinValue(LCD_u8_CONTROL_PORT,LCD_u8_RS_PIN,DIO_u8_LOW);
+    /* 2- RW pin =0 */
+    /*connect to GND in hardware*/
+    //DIO_u8SetPinValue(LCD_u8_CONTROL_PORT,LCD_u8_RW_PIN,DIO_u8_LOW);
+    /* 3- send cmd to data pins */
+    DIO_u8SetPortValue(LCD_u8_DATA_PORT,Copy_u8Cmnd);
+    /* 4- latching E  for "Tpw" to pass fata from i\o buffer to registers*/
+    DIO_u8SetPinValue(LCD_u8_CONTROL_PORT,LCD_u8_E_PIN,DIO_u8_HIGH);
+    _delay_us(1);
+    DIO_u8SetPinValue(LCD_u8_CONTROL_PORT,LCD_u8_E_PIN,DIO_u8_HIGH);
+}
+
+void LCD_voidWriteChar(u8 Copy_u8Char)
+{
+    /* 1- RS pin =1 */
+    DIO_u8SetPinValue(LCD_u8_CONTROL_PORT,LCD_u8_RS_PIN,DIO_u8_HIGH);
+    /* 2- RW pin =0 */
+    /*connect to GND in hardware*/
+    // DIO_u8SetPinValue(LCD_u8_CONTROL_PORT,LCD_u8_RW_PIN,DIO_u8_LOW);
+    /* 3- send cmd to data pins */
+    DIO_u8SetPortValue(LCD_u8_DATA_PORT,Copy_u8Char);
+    /* 4- latching E  for "Tpw" to pass fata from i\o buffer to registers*/
+    DIO_u8SetPinValue(LCD_u8_CONTROL_PORT,LCD_u8_E_PIN,DIO_u8_HIGH);
+    _delay_us(1);
+    DIO_u8SetPinValue(LCD_u8_CONTROL_PORT,LCD_u8_E_PIN,DIO_u8_HIGH); 
+}
+
+void LCD_voidInit(void)
+{
+    delay_ms(35);
+    /*function set command*/
+    LCD_voidWriteCmnd(0b00111000);
+    _delay_ms(40);
+    /*Displau ON\OFF control*/
+    LCD_voidWriteCmnd(0b00001111);
+    _delay_ms(40);
+    LCD_voidWriteCmnd(1);
+    _delay_ms(2);
+    LCD_voidWriteCmnd(0b00000110);
+
+}

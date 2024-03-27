@@ -1,0 +1,16 @@
+13:41:20 **** Build of configuration Debug for project DUBUGGING ****
+make all 
+Building file: ../MCAL/DIO/DIO_Prog.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\Dell\Downloads\Compressed\DUBUGGING" -I"C:\Users\Dell\Downloads\Compressed\DUBUGGING\APP" -I"C:\Users\Dell\Downloads\Compressed\DUBUGGING\HAL" -I"C:\Users\Dell\Downloads\Compressed\DUBUGGING\HAL\LED" -I"C:\Users\Dell\Downloads\Compressed\DUBUGGING\MCAL" -I"C:\Users\Dell\Downloads\Compressed\DUBUGGING\MCAL\DIO" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"MCAL/DIO/DIO_Prog.d" -MT"MCAL/DIO/DIO_Prog.o" -c -o "MCAL/DIO/DIO_Prog.o" "../MCAL/DIO/DIO_Prog.c"
+In file included from ../MCAL/DIO/DIO_Prog.c:9:
+../MCAL/DIO/DIO_Interface.h:56: warning: parameter names (without types) in function declaration
+../MCAL/DIO/DIO_Interface.h:57: warning: parameter names (without types) in function declaration
+../MCAL/DIO/DIO_Interface.h:58: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'M_DIO_U8_GetPinValue'
+../MCAL/DIO/DIO_Prog.c:12: error: expected ')' before 'Copy_U8_Num'
+../MCAL/DIO/DIO_Prog.c:39: error: expected ')' before 'Copy_U8_Num'
+make: *** [MCAL/DIO/DIO_Prog.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+13:41:20 Build Failed. 4 errors, 2 warnings. (took 407ms)
+

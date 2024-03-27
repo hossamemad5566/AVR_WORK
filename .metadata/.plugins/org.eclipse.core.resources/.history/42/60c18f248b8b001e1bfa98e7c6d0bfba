@@ -1,0 +1,64 @@
+/** {
+ ******************************************************************************
+ * @file           : app.c
+ * @author         : Hossam Emad
+ * @brief          :  7seg display read sw state and write result to led
+ ******************************************************************************
+ }*/
+
+/* ********************** Includes Section Start ********************** */
+#include "app.h"
+
+/* ********************** Includes Section End   ********************** */
+
+/* ********************** Macro Section Start ************************* */
+
+/* ********************** Macro Section End   ************************* */
+
+/* ********************** Global Variables Section Start ************** */
+u8 num[10]={ZERO,ONE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE};
+/* ********************** Global Variables  Section End   ************* */
+
+/* ********************** Sub-Program Declerations Section Start ******* */
+
+/* ********************** Sub-Program Declerations Section End ********* */
+
+int main ()
+{
+	/*step one
+	 *Configure PIN0 in PORTD as an output pin */
+	DDRD  =255;
+	/*configure Pin B5 as an output & rest o/p port as input*/
+	DDRB |= (1<<5); // ASSIGN PIN 5 AS OUTPUT
+	DDRB &= ~(1<<3);   // ASSIGN PIN 0 AS INPUT
+	/*activate pull up resistor for pin 5 at portb*/
+	PORTB |= (1<<3);
+	/*super loop*/
+	while(1)
+	{
+		//seg_display();
+		if(0 == (PINB & (1<<3)))
+		{
+			PORTB |= (1<<5);
+		}
+		else
+		{
+			PORTB &= ~(1<<5);
+		}
+	}
+
+	return 0;
+}
+
+
+/* ********************** Sub-Program Section Start ************* */
+
+
+/* ********************** Sub-Program Section End ************* */
+
+/**
+ ******************************************************************************
+ User          Date                 Brief
+ ******************************************************************************
+Hossam Emad     17-11-2023            14 videos
+*/

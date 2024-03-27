@@ -1,0 +1,24 @@
+/*********************************************************
+ * @name : Hossam Emad
+ * @date : 1/12/2023
+ * @swc: LCD 16*2
+ * @version : V1.0
+ * @description :
+*********************************************************/
+#ifndef _LCD_INTERFACE_H_
+#define _LCD_INTERFACE_H_
+/*choices for LCD_u8GoToXY */
+#define LCD_u8_LINE1     1
+#define LCD_u8_LINE2     2
+
+void LCD_voidInit(void);
+
+void LCD_voidWriteCmnd(u8 Copy_u8Cmnd);
+
+void LCD_voidWriteChar(u8 Copy_u8Cmnd);
+
+void LCD_voidWriteString(u8 *Copy_Pu8Srting);
+
+u8 LCD_u8GoToXY(u8 Copy_u8LineNo ,u8 Copy_u8Location):
+
+#endif

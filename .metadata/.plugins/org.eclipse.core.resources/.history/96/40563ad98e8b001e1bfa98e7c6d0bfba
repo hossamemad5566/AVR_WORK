@@ -1,0 +1,29 @@
+/* ********************** file gaurd Start ************************* */
+#ifndef _APP_H_
+#define _APP_H_
+
+
+/* ********************** Includes Section Start ********************** */
+#include <avr/io.h>
+#define F_CPU 16000000UL
+#include <util/delay.h>
+#include "platform_Types.h"
+
+/* ********************** Includes Section End   ********************** */
+
+
+/* ********************** Macro Section Start ************************* */
+#define SET_BIT(REG,PIN) (REG|=(1<<PIN))
+#define CLEAR_BIT(REG,PIN) (REG&=(~(1<<PIN)))
+#define TOGGLE_BIT(REG,PIN) (REG^=(1<<PIN))
+/* ********************** Macro Section End   ************************* */
+
+/* ********************** Sub-Program Declerations Section Start ******* */
+
+/* ********************** Sub-Program Declerations Section End ******* */
+
+
+
+
+#endif 
+/* ********************** file gaurd End ************************* */

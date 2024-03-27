@@ -1,0 +1,45 @@
+15:23:53 **** Incremental Build of configuration Debug for project UART32_TEST2 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: UART32_TEST2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,UART32_TEST2.map -mmcu=atmega32 -o "UART32_TEST2.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: UART32_TEST2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S UART32_TEST2.elf  >"UART32_TEST2.lss"
+Finished building: UART32_TEST2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex UART32_TEST2.elf  "UART32_TEST2.hex"
+Finished building: UART32_TEST2.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex UART32_TEST2.elf  "UART32_TEST2.eep"
+Finished building: UART32_TEST2.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART32_TEST2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10646 bytes (32.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:23:55 Build Finished. 0 errors, 1 warnings. (took 1s.635ms)
+
