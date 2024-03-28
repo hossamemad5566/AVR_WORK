@@ -1,5 +1,5 @@
 
-cross_control.elf:     file format elf32-avr
+ACC_Proj.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn

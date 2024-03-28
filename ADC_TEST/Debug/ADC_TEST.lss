@@ -9,9 +9,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   2 .bss          00000002  00800102  00800102  00000d3c  2**0
                   ALLOC
-  3 .stab         0000108c  00000000  00000000  00000d3c  2**2
+  3 .stab         00000fb4  00000000  00000000  00000d3c  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      000006b9  00000000  00000000  00001dc8  2**0
+  4 .stabstr      000006ac  00000000  00000000  00001cf0  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -89,10 +89,21 @@ Disassembly of section .text:
   a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 000000a6 <ADC_voidinit>:
+static void (*ADC_PvoidCallBack)(u16 DigitalVal) = NULL;
+
+
+
+void ADC_voidinit(void)
+{
   a6:	df 93       	push	r29
   a8:	cf 93       	push	r28
   aa:	cd b7       	in	r28, 0x3d	; 61
   ac:	de b7       	in	r29, 0x3e	; 62
+    /*vref*/
+    #if   (ADC_VREF == ADC_VREF_AREF)
+    CLR_BIT(ADC_u8_ADMUX,6);    CLR_BIT(ADC_u8_ADMUX,7);
+    #elif (ADC_VREF == ADC_VREF_AVCC)
+    SET_BIT(ADC_u8_ADMUX,6);    CLR_BIT(ADC_u8_ADMUX,7);
   ae:	ac e7       	ldi	r26, 0x7C	; 124
   b0:	b0 e0       	ldi	r27, 0x00	; 0
   b2:	ec e7       	ldi	r30, 0x7C	; 124
@@ -107,6 +118,12 @@ Disassembly of section .text:
   c4:	80 81       	ld	r24, Z
   c6:	8f 77       	andi	r24, 0x7F	; 127
   c8:	8c 93       	st	X, r24
+    CLR_BIT(ADC_u8_ADMUX,6);    CLR_BIT(ADC_u8_ADMUX,7);
+    #endif
+
+    /*adjusment*/
+    #if     (ADC_ADJUST == ADC_R_ADJ)
+    CLR_BIT(ADC_u8_ADMUX,5);
   ca:	ac e7       	ldi	r26, 0x7C	; 124
   cc:	b0 e0       	ldi	r27, 0x00	; 0
   ce:	ec e7       	ldi	r30, 0x7C	; 124
@@ -114,6 +131,12 @@ Disassembly of section .text:
   d2:	80 81       	ld	r24, Z
   d4:	8f 7d       	andi	r24, 0xDF	; 223
   d6:	8c 93       	st	X, r24
+    #elif(ADC_CLOCK == ADC_PRE_32)
+        SET_BIT(ADC_u8_ADCSRA,0);   CLR_BIT(ADC_u8_ADCSRA,1);   SET_BIT(ADC_u8_ADCSRA,2);
+    #elif(ADC_CLOCK == ADC_PRE_64)
+        CLR_BIT(ADC_u8_ADCSRA,0);   SET_BIT(ADC_u8_ADCSRA,1);   SET_BIT(ADC_u8_ADCSRA,2);
+    #elif(ADC_CLOCK == ADC_PRE_128)
+        SET_BIT(ADC_u8_ADCSRA,0);   SET_BIT(ADC_u8_ADCSRA,1);   SET_BIT(ADC_u8_ADCSRA,2);
   d8:	aa e7       	ldi	r26, 0x7A	; 122
   da:	b0 e0       	ldi	r27, 0x00	; 0
   dc:	ea e7       	ldi	r30, 0x7A	; 122
@@ -135,6 +158,9 @@ Disassembly of section .text:
   fc:	80 81       	ld	r24, Z
   fe:	84 60       	ori	r24, 0x04	; 4
  100:	8c 93       	st	X, r24
+    #endif
+    /* 4- check auto trigger */
+    CLR_BIT(ADC_u8_ADCSRA,5);
  102:	aa e7       	ldi	r26, 0x7A	; 122
  104:	b0 e0       	ldi	r27, 0x00	; 0
  106:	ea e7       	ldi	r30, 0x7A	; 122
@@ -142,6 +168,8 @@ Disassembly of section .text:
  10a:	80 81       	ld	r24, Z
  10c:	8f 7d       	andi	r24, 0xDF	; 223
  10e:	8c 93       	st	X, r24
+    /* 5- enable ADC */
+    SET_BIT(ADC_u8_ADCSRA,7);
  110:	aa e7       	ldi	r26, 0x7A	; 122
  112:	b0 e0       	ldi	r27, 0x00	; 0
  114:	ea e7       	ldi	r30, 0x7A	; 122
@@ -149,14 +177,12 @@ Disassembly of section .text:
  118:	80 81       	ld	r24, Z
  11a:	80 68       	ori	r24, 0x80	; 128
  11c:	8c 93       	st	X, r24
+}
  11e:	cf 91       	pop	r28
  120:	df 91       	pop	r29
  122:	08 95       	ret
 
 00000124 <ADC_u8GetDigitalValueSyncNonBlocking>:
-    /* 5- enable ADC */
-    SET_BIT(ADC_u8_ADCSRA,7);
-}
 
 u8 ADC_u8GetDigitalValueSyncNonBlocking(u8 Copy_u8ChannedId , u16 *Copy_u16DigitalVal)
 {

@@ -1869,7 +1869,7 @@ void GIE_voidDisable(void)
  bf4:	08 95       	ret
 
 00000bf6 <main>:
-	void tog_led(void);
+void tog_led(void);
 
 
 

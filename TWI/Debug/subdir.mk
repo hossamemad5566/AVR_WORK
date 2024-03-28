@@ -5,16 +5,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../DIO_program.c \
+../EEPROM_prog.c \
 ../I2c_prog.c \
 ../main.c 
 
 OBJS += \
 ./DIO_program.o \
+./EEPROM_prog.o \
 ./I2c_prog.o \
 ./main.o 
 
 C_DEPS += \
 ./DIO_program.d \
+./EEPROM_prog.d \
 ./I2c_prog.d \
 ./main.d 
 

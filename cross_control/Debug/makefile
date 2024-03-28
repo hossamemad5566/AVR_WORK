@@ -34,17 +34,17 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := cross_control
+BUILD_ARTIFACT_NAME := ACC_Proj
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 LSS += \
-cross_control.lss \
+ACC_Proj.lss \
 
 FLASH_IMAGE += \
-cross_control.hex \
+ACC_Proj.hex \
 
 SIZEDUMMY += \
 sizedummy \
@@ -54,37 +54,37 @@ sizedummy \
 all: main-build
 
 # Main-build Target
-main-build: cross_control.elf secondary-outputs
+main-build: ACC_Proj.elf secondary-outputs
 
 # Tool invocations
-cross_control.elf: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
+ACC_Proj.elf: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,cross_control.map -mmcu=atmega32 -o "cross_control.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,ACC_Proj.map -mmcu=atmega32 -o "ACC_Proj.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-cross_control.lss: cross_control.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)
+ACC_Proj.lss: ACC_Proj.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Invoking: AVR Create Extended Listing'
-	-avr-objdump -h -S cross_control.elf  >"cross_control.lss"
+	-avr-objdump -h -S ACC_Proj.elf  >"ACC_Proj.lss"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-cross_control.hex: cross_control.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)
+ACC_Proj.hex: ACC_Proj.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Create Flash image (ihex format)'
-	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex cross_control.elf  "cross_control.hex"
+	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ACC_Proj.elf  "ACC_Proj.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-sizedummy: cross_control.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)
+sizedummy: ACC_Proj.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega32 cross_control.elf
+	-avr-size --format=avr --mcu=atmega32 ACC_Proj.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) cross_control.elf
+	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) ACC_Proj.elf
 	-@echo ' '
 
 secondary-outputs: $(LSS) $(FLASH_IMAGE) $(SIZEDUMMY)

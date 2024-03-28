@@ -7,22 +7,19 @@ C_SRCS += \
 ../ADC_prog.c \
 ../DIO_program.c \
 ../GIE_PROG.c \
-../main.c \
-../service.c 
+../main.c 
 
 OBJS += \
 ./ADC_prog.o \
 ./DIO_program.o \
 ./GIE_PROG.o \
-./main.o \
-./service.o 
+./main.o 
 
 C_DEPS += \
 ./ADC_prog.d \
 ./DIO_program.d \
 ./GIE_PROG.d \
-./main.d \
-./service.d 
+./main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -28,7 +28,6 @@ LOAD ./ADC_prog.o
 LOAD ./DIO_program.o
 LOAD ./GIE_PROG.o
 LOAD ./main.o
-LOAD ./service.o
 LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
 LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
@@ -208,7 +207,6 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text          0x000000a6        0x0 ./DIO_program.o
  .text          0x000000a6        0x0 ./GIE_PROG.o
  .text          0x000000a6        0x0 ./main.o
- .text          0x000000a6        0x0 ./service.o
  .text          0x000000a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
  .text          0x000000a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .text          0x000000a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
@@ -302,7 +300,6 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .data          0x00800100        0x0 ./DIO_program.o
  .data          0x00800100        0x0 ./GIE_PROG.o
  .data          0x00800100        0x0 ./main.o
- .data          0x00800100        0x0 ./service.o
  .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
  .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
@@ -326,7 +323,6 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .bss           0x00800102        0x0 ./DIO_program.o
  .bss           0x00800102        0x0 ./GIE_PROG.o
  .bss           0x00800102        0x0 ./main.o
- .bss           0x00800102        0x0 ./service.o
  .bss           0x00800102        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
  .bss           0x00800102        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .bss           0x00800102        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
@@ -362,7 +358,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x108c
+.stab           0x00000000      0xfb4
  *(.stab)
  .stab          0x00000000      0x420 ./ADC_prog.o
  .stab          0x00000420      0x7f8 ./DIO_program.o
@@ -371,12 +367,10 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                                 0x1e0 (size before relaxing)
  .stab          0x00000d5c      0x258 ./main.o
                                 0x2f4 (size before relaxing)
- .stab          0x00000fb4       0xd8 ./service.o
-                                 0xe4 (size before relaxing)
 
-.stabstr        0x00000000      0x6b9
+.stabstr        0x00000000      0x6ac
  *(.stabstr)
- .stabstr       0x00000000      0x6b9 ./ADC_prog.o
+ .stabstr       0x00000000      0x6ac ./ADC_prog.o
 
 .stab.excl
  *(.stab.excl)

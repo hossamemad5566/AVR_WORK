@@ -29,4 +29,6 @@ void test (void);
 #define BLUE_            0X02
 #define PURPLE_          0X03
 
+#define F_NOT_MATCHED    0X40
+
 #endif

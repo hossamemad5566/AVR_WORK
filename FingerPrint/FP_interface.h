@@ -24,6 +24,9 @@
 #define BLUE            BLUE_
 #define PURPLE          PURPLE_
 
+#define FP_NOT_MATCHED    F_NOT_MATCHED
+
+
 #define  CHAR_BUFFER_1  0X01
 #define  CHAR_BUFFER_2  0X02
 
@@ -46,9 +49,7 @@ u8 FPSend(u8 copy_u8PID,u16 Copy_u16PackLength,u8* copy_Pu8Pack);
 **************************************************************/
 u8 FingerPS_handShake(void);
 
-
 u8 FingerPS_genImg(void);
-
 /*******************************************************
  * Copy_u8bufferID : CHAR_BUFFER_1        CHAR_BUFFER_2
 *******************************************************/
@@ -56,10 +57,15 @@ u8 FingerPS_ConvertImg2CharFile(u8 Copy_u8bufferID);
 
 /*******************************************************
  * Copy_u8bufferID : CHAR_BUFFER_1        CHAR_BUFFER_2
- * Copy_u8PageID   : 
+ * Copy_u16PageID   : 0x00 >> 0x15
 *******************************************************/
-u8 FingerPS_LoadCharFile(u8 Copy_u8bufferID,u8 Copy_u8PageID);
+u8 FingerPS_LoadCharFile(u8 Copy_u8bufferID,u16 Copy_u16PageID);
 
+/*******************************************************
+ * Copy_u8bufferID : CHAR_BUFFER_1        CHAR_BUFFER_2
+ * Copy_u16PageID   : 0x00 >> 0x15
+*******************************************************/
+u8 FingerPS_StoreTemplate(u8 Copy_u8bufferID,u16 Copy_u16PageID);
 
 /****************************************************************************************
  * copy_u8Control : BREATHING     FLASHING      ON      OFF     ON_GRAD     OFF_GRAD
@@ -69,18 +75,22 @@ u8 FingerPS_LoadCharFile(u8 Copy_u8bufferID,u8 Copy_u8PageID);
 *****************************************************************************************/
 u8 FingerPS_Auraked(u8 copy_u8Control,u8 copy_u8Speed,u8 copy_u8Color,u8 copy_u8Cycles);
 
-
-
-
-
-
-
-
 u8 FingerPS_genTemplate(void);
 
+/*******************************************************
+ * if function return 
+ *      0x00              >> finger matched 
+ *      FP_NOT_MATCHED >> not mathced
+*******************************************************/
 u8 FingerPS_Match(void);
 
+/*******************************************************
+ * Copy_u16StoreLoc : PageID   : 0x00 >> 0x15
+*******************************************************/
+void FP_setNewFinger(u16 Copy_u16StoreLoc);
 
-
-
+/*******************************************************
+ * Copy_u16StoreLoc : PageID   : 0x00 >> 0x15
+*******************************************************/
+void FP_CheckMatch(u16 Copy_u16StoreLoc);
 #endif

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/01_embedded/AVR/mine_work/FingerPrint",
-      "program": "d:/01_embedded/AVR/mine_work/FingerPrint/build/Debug/outDebug",
+      "cwd": "d:/01_embedded/AVR/mine_work/AVR_WORK/FingerPrint",
+      "program": "d:/01_embedded/AVR/mine_work/AVR_WORK/FingerPrint/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
