@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/01_embedded/AVR/mine_work/SPI_Test",
-      "program": "d:/01_embedded/AVR/mine_work/SPI_Test/build/Debug/outDebug",
+      "cwd": "d:/01_embedded/AVR/mine_work/AVR_WORK/SPI_Test",
+      "program": "d:/01_embedded/AVR/mine_work/AVR_WORK/SPI_Test/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

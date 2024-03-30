@@ -270,12 +270,15 @@ void FP_setNewFinger(u16 Copy_u16StoreLoc)
     /********************************************
     *1- gen img
     *********************************************/
+    H_Lcd_Void_LCDGoTo(0,0);
     H_Lcd_Void_LCDWriteString("Place your finger");
     while(x!=0)
     {
         x = FingerPS_genImg();
         FingerPS_Auraked(BREATHING,0xAA,BLUE,1);
     }
+    H_Lcd_Void_LCDGoTo(1,0);
+    H_Lcd_Void_LCDWriteCharacter('*');
     //H_Lcd_Void_LCDGoTo(0,0);
     //H_Lcd_Void_LCDWriteString("First img generated ");
     x=1;
@@ -287,7 +290,6 @@ void FP_setNewFinger(u16 Copy_u16StoreLoc)
         x = FingerPS_ConvertImg2CharFile(CHAR_BUFFER_1);
         FingerPS_Auraked(BREATHING,0xAA,PURPLE,1);
     }
-    H_Lcd_Void_LCDGoTo(1,0);
     H_Lcd_Void_LCDWriteCharacter('*');
     x=1;
     /********************************************
@@ -332,22 +334,29 @@ void FP_setNewFinger(u16 Copy_u16StoreLoc)
     H_Lcd_Void_LCDWriteString("Finger Storing done ");
     H_Lcd_Void_LCDGoTo(1,0);
     H_Lcd_Void_LCDWriteString("                    ");
+    _delay_ms(200);
     x=1;
 }
 
 void FP_CheckMatch(u16 Copy_u16StoreLoc)
 {
+    u8 MatchScore =0;
+    H_Lcd_Void_LCDGoTo(0,0);
+    H_Lcd_Void_LCDWriteString("Place your finger");
     u8 x=1;
     /********************************************
     *7- gen img
     *********************************************/
-    H_Lcd_Void_LCDWriteString("Place your finger");
     while(x!=0)
     {
         x = FingerPS_genImg();
         FingerPS_Auraked(BREATHING,0xAA,BLUE,1);
     }
     x=1;
+    H_Lcd_Void_LCDGoTo(1,0);
+    H_Lcd_Void_LCDWriteString("                ");
+    H_Lcd_Void_LCDGoTo(1,0);
+    H_Lcd_Void_LCDWriteString("loading: *");
     /********************************************
     *8- FIRST CHARACTER FILE GENERATION
     *********************************************/
@@ -357,6 +366,7 @@ void FP_CheckMatch(u16 Copy_u16StoreLoc)
         FingerPS_Auraked(BREATHING,0xAA,PURPLE,1);
     }
     x=1;
+    H_Lcd_Void_LCDWriteCharacter('*');
     /********************************************
     *9- Load Char in char file 2
     *********************************************/
@@ -365,6 +375,7 @@ void FP_CheckMatch(u16 Copy_u16StoreLoc)
         x = FingerPS_LoadCharFile(CHAR_BUFFER_2,Copy_u16StoreLoc);
         FingerPS_Auraked(BREATHING,0xAA,BLUE,1);
     }
+    H_Lcd_Void_LCDWriteCharacter('*');
     /********************************************
     *10- CHECK MATCH
     *********************************************/
@@ -373,13 +384,15 @@ void FP_CheckMatch(u16 Copy_u16StoreLoc)
     if(x==0)
     {
         H_Lcd_Void_LCDGoTo(0,0);
-        H_Lcd_Void_LCDWriteString(" Matched  *_*  ");
+        H_Lcd_Void_LCDWriteString("    Matched  *_^     ");
+        MatchScore =1;
     }
     else if(x==FP_NOT_MATCHED)
     {
         
         H_Lcd_Void_LCDGoTo(0,0);
-        H_Lcd_Void_LCDWriteString(" Matched  *_*  ");
+        H_Lcd_Void_LCDWriteString(" Not  Matched  -_-  ");
+        MatchScore = 0;
     }
 } 
 

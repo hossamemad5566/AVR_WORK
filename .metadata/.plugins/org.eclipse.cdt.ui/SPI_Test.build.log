@@ -1,29 +1,5 @@
-20:45:41 **** Incremental Build of configuration Debug for project SPI_Test ****
+00:38:49 **** Build of configuration Debug for project SPI_Test ****
 make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:10:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: SPI_Test.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,SPI_Test.map -mmcu=atmega328p -o "SPI_Test.elf"  ./DIO_program.o ./LCD_program.o ./SPI_prog.o ./main.o   
-Finished building target: SPI_Test.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S SPI_Test.elf  >"SPI_Test.lss"
-Finished building: SPI_Test.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex SPI_Test.elf  "SPI_Test.hex"
-Finished building: SPI_Test.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex SPI_Test.elf  "SPI_Test.eep"
-Finished building: SPI_Test.eep
- 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega328p SPI_Test.elf
 AVR Memory Usage
@@ -40,5 +16,5 @@ Data:         12 bytes (0.6% Full)
 Finished building: sizedummy
  
 
-20:45:42 Build Finished. 0 errors, 1 warnings. (took 548ms)
+00:38:50 Build Finished. 0 errors, 0 warnings. (took 395ms)
 

@@ -1,5 +1,57 @@
-20:43:57 **** Incremental Build of configuration Debug for project SPI_Slave ****
+00:38:48 **** Incremental Build of configuration Debug for project SPI_Slave ****
 make all 
+Building file: ../DIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"DIO_program.d" -MT"DIO_program.o" -c -o "DIO_program.o" "../DIO_program.c"
+Finished building: ../DIO_program.c
+ 
+Building file: ../LCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"LCD_program.d" -MT"LCD_program.o" -c -o "LCD_program.o" "../LCD_program.c"
+In file included from ../LCD_program.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD_program.c: In function 'LCD_4bitCharDivider':
+../LCD_program.c:41: warning: implicit declaration of function 'LCD_voidSend4BitChar'
+../LCD_program.c: At top level:
+../LCD_program.c:60: warning: conflicting types for 'LCD_voidSend4BitChar'
+../LCD_program.c:41: warning: previous implicit declaration of 'LCD_voidSend4BitChar' was here
+../LCD_program.c: In function 'Num_u16ToString':
+../LCD_program.c:236: warning: implicit declaration of function 'sprintf'
+../LCD_program.c:236: warning: incompatible implicit declaration of built-in function 'sprintf'
+../LCD_program.c:236: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+Finished building: ../LCD_program.c
+ 
+Building file: ../SPI_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"SPI_prog.d" -MT"SPI_prog.o" -c -o "SPI_prog.o" "../SPI_prog.c"
+../SPI_prog.c: In function 'SPI_u8SendByte':
+../SPI_prog.c:81: warning: control reaches end of non-void function
+Finished building: ../SPI_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: SPI_Slave.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,SPI_Slave.map -mmcu=atmega328p -o "SPI_Slave.elf"  ./DIO_program.o ./LCD_program.o ./SPI_prog.o ./main.o   
+Finished building target: SPI_Slave.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S SPI_Slave.elf  >"SPI_Slave.lss"
+Finished building: SPI_Slave.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex SPI_Slave.elf  "SPI_Slave.hex"
+Finished building: SPI_Slave.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex SPI_Slave.elf  "SPI_Slave.eep"
+Finished building: SPI_Slave.eep
+ 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega328p SPI_Slave.elf
 AVR Memory Usage
@@ -16,5 +68,5 @@ Data:         12 bytes (0.6% Full)
 Finished building: sizedummy
  
 
-20:43:57 Build Finished. 0 errors, 0 warnings. (took 146ms)
+00:38:49 Build Finished. 0 errors, 9 warnings. (took 1s.466ms)
 

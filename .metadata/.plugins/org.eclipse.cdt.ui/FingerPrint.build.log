@@ -1,20 +1,27 @@
-14:03:34 **** Incremental Build of configuration Debug for project FingerPrint ****
+15:28:20 **** Incremental Build of configuration Debug for project FingerPrint ****
 make all 
-Building file: ../main.c
+Building file: ../FP_prog.c
 Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.h:3,
-                 from ../main.c:1:
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"FP_prog.d" -MT"FP_prog.o" -c -o "FP_prog.o" "../FP_prog.c"
+In file included from ../FP_prog.c:9:
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c: In function 'main':
-../main.c:24: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
-../main.c:31: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
-../main.c:42: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
-Finished building: ../main.c
+../FP_prog.c: In function 'FingerPS_Match':
+../FP_prog.c:237: warning: unused variable 'pack_ACK'
+../FP_prog.c: In function 'FP_setNewFinger':
+../FP_prog.c:274: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../FP_prog.c:334: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../FP_prog.c:336: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../FP_prog.c: In function 'FP_CheckMatch':
+../FP_prog.c:345: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../FP_prog.c:357: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../FP_prog.c:359: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../FP_prog.c:387: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../FP_prog.c:394: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../FP_prog.c
  
 Building target: FingerPrint.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,FingerPrint.map -mmcu=atmega32 -o "FingerPrint.elf"  ./DIO_Prog.o ./FP_prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./UART_Prog.o ./main.o   
+avr-gcc -Wl,-Map,FingerPrint.map -mmcu=atmega32 -o "FingerPrint.elf"  ./DIO_Prog.o ./FP_prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
 Finished building target: FingerPrint.elf
  
 Invoking: AVR Create Extended Listing
@@ -35,15 +42,15 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   12090 bytes (36.9% Full)
+Program:   14304 bytes (43.7% Full)
 (.text + .data + .bootloader)
 
-Data:        125 bytes (6.1% Full)
+Data:        197 bytes (9.6% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-14:03:35 Build Finished. 0 errors, 4 warnings. (took 1s.169ms)
+15:28:21 Build Finished. 0 errors, 10 warnings. (took 916ms)
 

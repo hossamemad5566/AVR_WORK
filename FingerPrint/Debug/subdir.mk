@@ -9,6 +9,7 @@ C_SRCS += \
 ../GIE_prog.c \
 ../LCD_Prog.c \
 ../LED_Prog.c \
+../PushButton_Prog.c \
 ../UART_Prog.c \
 ../main.c 
 
@@ -18,6 +19,7 @@ OBJS += \
 ./GIE_prog.o \
 ./LCD_Prog.o \
 ./LED_Prog.o \
+./PushButton_Prog.o \
 ./UART_Prog.o \
 ./main.o 
 
@@ -27,6 +29,7 @@ C_DEPS += \
 ./GIE_prog.d \
 ./LCD_Prog.d \
 ./LED_Prog.d \
+./PushButton_Prog.d \
 ./UART_Prog.d \
 ./main.d 
 
