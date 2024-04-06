@@ -8,6 +8,8 @@ void setup (void)
     FP_intit();
     H_PushButton_Void_PushButtonInit(PUSH_BUTTON_0);
     H_PushButton_Void_PushButtonInit(PUSH_BUTTON_1);
+    H_Lcd_Void_LCDGoTo(3,0);
+    H_Lcd_Void_LCDWriteString("1:ADD   2:Match");
     
 }
 
@@ -19,11 +21,11 @@ int main(void)
 
     while(1)
     {
-    if(H_PushButton_U8_PushButtonRead(PUSH_BUTTON_0)==PUSH_BUTTON_PRESSED)
-    {FP_setNewFinger(2);}
-    else if(H_PushButton_U8_PushButtonRead(PUSH_BUTTON_1)==PUSH_BUTTON_PRESSED)
-    {FP_CheckMatch(2);}
-    }
+		if(H_PushButton_U8_PushButtonRead(PUSH_BUTTON_0)==PUSH_BUTTON_PRESSED)
+		{FP_setNewFinger(2);}
+		else if(H_PushButton_U8_PushButtonRead(PUSH_BUTTON_1)==PUSH_BUTTON_PRESSED)
+		{FP_CheckMatch(2);}
+	}
      
 }
     
