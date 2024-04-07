@@ -328,16 +328,20 @@ void FP_setNewFinger(u16 Copy_u16StoreLoc)
     while(x!=0)
     {
         x = FingerPS_StoreTemplate(CHAR_BUFFER_1,Copy_u16StoreLoc);
-        FingerPS_Auraked(BREATHING,0xAA,BLUE,1);
+        FingerPS_Auraked(FLASHING,0xAA,RED,3);
+
     }
+    x=1;
     H_Lcd_Void_LCDGoTo(0,0);
     H_Lcd_Void_LCDWriteString("Finger Storing done ");
     H_Lcd_Void_LCDGoTo(1,0);
     H_Lcd_Void_LCDWriteString("                    ");
     _delay_ms(200);
-    x=1;
 }
 
+/*this function is the version1 one with debugging cases and it display
+the * for each stage of code execution*/
+#if 0
 void FP_CheckMatch(u16 Copy_u16StoreLoc)
 {
     u8 MatchScore =0;
@@ -394,6 +398,81 @@ void FP_CheckMatch(u16 Copy_u16StoreLoc)
         H_Lcd_Void_LCDWriteString(" Not  Matched  -_-  ");
         MatchScore = 0;
     }
+} 
+#endif
+
+u8 FP_CheckMatch(u16 Copy_u16StoreLoc)
+{
+    u8 MatchScore =0;
+    H_Lcd_Void_LCDGoTo(0,0);
+    H_Lcd_Void_LCDWriteString("Place your finger");
+    u8 x=1;
+    /********************************************
+    *7- gen img
+    *********************************************/
+    while(x!=0)
+    {
+        x = FingerPS_genImg();
+        FingerPS_Auraked(BREATHING,0xAA,BLUE,1);
+    }
+    x=1;
+    #if (DEBUGGING)
+    H_Lcd_Void_LCDGoTo(1,0);
+    H_Lcd_Void_LCDWriteString("                ");
+    H_Lcd_Void_LCDGoTo(1,0);
+    H_Lcd_Void_LCDWriteString("loading: *");
+    #endif
+    /********************************************
+    *8- FIRST CHARACTER FILE GENERATION
+    *********************************************/
+    while(x!=0)
+    {
+        x = FingerPS_ConvertImg2CharFile(CHAR_BUFFER_1);
+        FingerPS_Auraked(BREATHING,0xAA,PURPLE,1);
+    }
+    x=1;
+    #if (DEBUGGING)
+    H_Lcd_Void_LCDWriteCharacter('*');
+    #endif
+    /********************************************
+    *9- Load Char in char file 2
+    *********************************************/
+    while(x!=0)
+    {
+        x = FingerPS_LoadCharFile(CHAR_BUFFER_2,Copy_u16StoreLoc);
+        FingerPS_Auraked(BREATHING,0xAA,BLUE,1);
+    }
+    #if (DEBUGGING)
+    H_Lcd_Void_LCDWriteCharacter('*');
+    #endif
+    /********************************************
+    *10- CHECK MATCH
+    *********************************************/
+    x = FingerPS_Match();
+    FingerPS_Auraked(BREATHING,0xAA,BLUE,1);
+    if(x==0)
+    {
+        #if (DEBUGGING)
+        H_Lcd_Void_LCDGoTo(0,0);
+        H_Lcd_Void_LCDWriteString("    Matched  *_^     ");
+        #endif
+        MatchScore =1;
+        FingerPS_Auraked(FLASHING,0xAA,PURPLE,3);
+    }
+    else if(x==FP_NOT_MATCHED)
+    {
+        #if (DEBUGGING)
+        H_Lcd_Void_LCDGoTo(0,0);
+        H_Lcd_Void_LCDWriteString(" Not  Matched  -_-  ");
+        #endif
+        MatchScore = 0;
+    }
+    #if (DEBUGGING)
+    H_Lcd_Void_LCDGoTo(1,0);
+    H_Lcd_Void_LCDWriteString("                    ");
+    #endif
+
+    return MatchScore;
 } 
 
 #if 0

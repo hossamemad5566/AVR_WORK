@@ -31,4 +31,6 @@ void test (void);
 
 #define F_NOT_MATCHED    0X40
 
+#define DEBUGGING       0
+
 #endif

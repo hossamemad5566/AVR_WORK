@@ -16,15 +16,43 @@ void setup (void)
 int main(void)
 {
 	setup();
-    
-
+    u8 local_FPIndex =1;
+    u8 local_u8Flag =0;
 
     while(1)
     {
 		if(H_PushButton_U8_PushButtonRead(PUSH_BUTTON_0)==PUSH_BUTTON_PRESSED)
-		{FP_setNewFinger(2);}
+		{
+            FP_setNewFinger(local_FPIndex);
+            local_FPIndex++;
+        }
+
 		else if(H_PushButton_U8_PushButtonRead(PUSH_BUTTON_1)==PUSH_BUTTON_PRESSED)
-		{FP_CheckMatch(2);}
+		{
+            for(u8 i = 1;i<=local_FPIndex;i++)
+            {
+                if(FP_CheckMatch(i))
+                {
+                    H_Lcd_Void_LCDGoTo(0,0);
+                    H_Lcd_Void_LCDWriteString("    Matched  *_^     ");
+                    local_u8Flag = 1;
+                    break;
+                }
+                else 
+                {
+                	local_u8Flag = 0;
+                    //H_Lcd_Void_LCDGoTo(0,0);
+                    //H_Lcd_Void_LCDWriteString(" Not  Matched  -_-  ");
+                }
+            }
+            if(local_u8Flag == 0)
+            {
+                H_Lcd_Void_LCDGoTo(0,0);
+                H_Lcd_Void_LCDWriteString(" Not  Matched  -_-  ");
+            }
+            
+            
+        }
 	}
      
 }

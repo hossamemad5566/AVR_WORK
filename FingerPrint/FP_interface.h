@@ -92,6 +92,6 @@ void FP_setNewFinger(u16 Copy_u16StoreLoc);
 /*******************************************************
  * Copy_u16StoreLoc : PageID   : 0x00 >> 0x15
 *******************************************************/
-void FP_CheckMatch(u16 Copy_u16StoreLoc);
+u8 FP_CheckMatch(u16 Copy_u16StoreLoc);
 
 #endif
