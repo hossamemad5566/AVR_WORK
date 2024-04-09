@@ -1,4 +1,4 @@
-11:39:34 **** Incremental Build of configuration Debug for project FingerPrint ****
+09:31:29 **** Incremental Build of configuration Debug for project FingerPrint ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
@@ -8,9 +8,10 @@ In file included from ../main.h:3,
 c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 ../main.c: In function 'setup':
 ../main.c:12: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:14: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
 ../main.c: In function 'main':
-../main.c:37: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
-../main.c:51: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:40: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:54: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
 Finished building: ../main.c
  
 Building target: FingerPrint.elf
@@ -36,15 +37,15 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   14336 bytes (43.8% Full)
+Program:   14452 bytes (44.1% Full)
 (.text + .data + .bootloader)
 
-Data:        185 bytes (9.0% Full)
+Data:        203 bytes (9.9% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-11:39:35 Build Finished. 0 errors, 4 warnings. (took 1s.52ms)
+09:31:30 Build Finished. 0 errors, 5 warnings. (took 932ms)
 

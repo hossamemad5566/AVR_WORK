@@ -249,6 +249,21 @@ u8 FingerPS_Match(void)
     return FP_ERRORS.ERR_all;
 }
 
+u8 FP_voidMemoryFree(void)
+{
+    u8 pack_content[1] = {0x0D};
+    u8 pack_ACK = 0x00;
+    /*send*/
+    FPSend(PID_CMND,3,pack_content);
+    /*receive*/
+    while(ArrIndex <12);/*TODO: need to be enhanced*/
+    Completeflag =1;
+    FPReceiveACK(pack_ACK);
+    Completeflag =0;
+    ArrIndex=0;
+    return FP_ERRORS.ERR_all; 
+}
+
 u8 FingerPS_Auraked(u8 copy_u8Control,u8 copy_u8Speed,u8 copy_u8Color,u8 copy_u8Cycles)
 {
     u8 pack_content[5] = {0x35,copy_u8Control,copy_u8Speed,copy_u8Color,copy_u8Cycles};

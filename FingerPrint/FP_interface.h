@@ -85,6 +85,11 @@ u8 FingerPS_genTemplate(void);
 u8 FingerPS_Match(void);
 
 /*******************************************************
+ * To free the FP flash
+*******************************************************/
+u8 FP_voidMemoryFree(void);
+
+/*******************************************************
  * Copy_u16StoreLoc : PageID   : 0x00 >> 0x15
 *******************************************************/
 void FP_setNewFinger(u16 Copy_u16StoreLoc);
