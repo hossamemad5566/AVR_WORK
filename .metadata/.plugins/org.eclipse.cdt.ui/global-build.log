@@ -33520,3 +33520,718 @@ Data:        203 bytes (9.9% Full)
 
 Finished building: sizedummy
  
+11:47:52 **** Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../RTOS/Src/PollQ.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/PollQ.d" -MT"RTOS/Src/PollQ.o" -c -o "RTOS/Src/PollQ.o" "../RTOS/Src/PollQ.c"
+../RTOS/Src/PollQ.c:99:22: error: FreeRTOS.h: No such file or directory
+../RTOS/Src/PollQ.c:100:18: error: task.h: No such file or directory
+../RTOS/Src/PollQ.c:101:19: error: queue.h: No such file or directory
+../RTOS/Src/PollQ.c:104:19: error: PollQ.h: No such file or directory
+../RTOS/Src/PollQ.c:115: warning: type defaults to 'int' in declaration of 'portTASK_FUNCTION_PROTO'
+../RTOS/Src/PollQ.c:115: warning: parameter names (without types) in function declaration
+../RTOS/Src/PollQ.c:118: warning: type defaults to 'int' in declaration of 'portTASK_FUNCTION_PROTO'
+../RTOS/Src/PollQ.c:118: warning: parameter names (without types) in function declaration
+../RTOS/Src/PollQ.c:122: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'xPollingConsumerCount'
+../RTOS/Src/PollQ.c:126: error: expected ')' before 'uxPriority'
+../RTOS/Src/PollQ.c:148: warning: return type defaults to 'int'
+../RTOS/Src/PollQ.c: In function 'portTASK_FUNCTION':
+../RTOS/Src/PollQ.c:148: warning: type of 'vPolledQueueProducer' defaults to 'int'
+../RTOS/Src/PollQ.c:148: warning: type of 'pvParameters' defaults to 'int'
+../RTOS/Src/PollQ.c:149: error: 'uint16_t' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:149: error: (Each undeclared identifier is reported only once
+../RTOS/Src/PollQ.c:149: error: for each function it appears in.)
+../RTOS/Src/PollQ.c:149: error: expected ';' before 'usValue'
+../RTOS/Src/PollQ.c:150: error: 'BaseType_t' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:150: error: expected ';' before 'xError'
+../RTOS/Src/PollQ.c:154: error: 'xLoop' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:154: error: expected ')' before numeric constant
+../RTOS/Src/PollQ.c:157: warning: implicit declaration of function 'xQueueSend'
+../RTOS/Src/PollQ.c:157: error: 'QueueHandle_t' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:157: error: expected expression before ')' token
+../RTOS/Src/PollQ.c:157: error: 'usValue' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:157: error: 'TickType_t' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:157: error: expected ')' before numeric constant
+../RTOS/Src/PollQ.c:157: error: 'pdPASS' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:161: error: 'xError' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:161: error: 'pdTRUE' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:165: error: 'pdFALSE' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:169: warning: implicit declaration of function 'portENTER_CRITICAL'
+../RTOS/Src/PollQ.c:170: error: 'xPollingProducerCount' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:171: warning: implicit declaration of function 'portEXIT_CRITICAL'
+../RTOS/Src/PollQ.c:181: warning: implicit declaration of function 'vTaskDelay'
+../RTOS/Src/PollQ.c:181: error: expected ')' before numeric constant
+../RTOS/Src/PollQ.c: At top level:
+../RTOS/Src/PollQ.c:187: warning: return type defaults to 'int'
+../RTOS/Src/PollQ.c:186: error: redefinition of 'portTASK_FUNCTION'
+../RTOS/Src/PollQ.c:148: error: previous definition of 'portTASK_FUNCTION' was here
+../RTOS/Src/PollQ.c: In function 'portTASK_FUNCTION':
+../RTOS/Src/PollQ.c:187: warning: type of 'vPolledQueueConsumer' defaults to 'int'
+../RTOS/Src/PollQ.c:187: warning: type of 'pvParameters' defaults to 'int'
+../RTOS/Src/PollQ.c:188: error: 'uint16_t' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:188: error: expected ';' before 'usData'
+../RTOS/Src/PollQ.c:189: error: 'BaseType_t' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:189: error: expected ';' before 'xError'
+../RTOS/Src/PollQ.c:194: warning: implicit declaration of function 'uxQueueMessagesWaiting'
+../RTOS/Src/PollQ.c:194: error: 'QueueHandle_t' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:194: error: expected expression before ')' token
+../RTOS/Src/PollQ.c:196: warning: implicit declaration of function 'xQueueReceive'
+../RTOS/Src/PollQ.c:196: error: expected expression before ')' token
+../RTOS/Src/PollQ.c:196: error: 'usData' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:196: error: 'TickType_t' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:196: error: expected ')' before numeric constant
+../RTOS/Src/PollQ.c:196: error: 'pdPASS' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:198: error: 'usExpectedValue' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:202: error: 'xError' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:202: error: 'pdTRUE' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:210: error: 'pdFALSE' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:215: error: 'xPollingConsumerCount' undeclared (first use in this function)
+../RTOS/Src/PollQ.c:227: error: expected ')' before numeric constant
+../RTOS/Src/PollQ.c:227: error: 'portTICK_PERIOD_MS' undeclared (first use in this function)
+../RTOS/Src/PollQ.c: At top level:
+../RTOS/Src/PollQ.c:233: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'xArePollingQueuesStillRunning'
+make: *** [RTOS/Src/PollQ.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:48:48 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../RTOS/Src/PollQ.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/PollQ.d" -MT"RTOS/Src/PollQ.o" -c -o "RTOS/Src/PollQ.o" "../RTOS/Src/PollQ.c"
+Finished building: ../RTOS/Src/PollQ.c
+ 
+Building file: ../RTOS/Src/croutine.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/croutine.d" -MT"RTOS/Src/croutine.o" -c -o "RTOS/Src/croutine.o" "../RTOS/Src/croutine.c"
+Finished building: ../RTOS/Src/croutine.c
+ 
+Building file: ../RTOS/Src/event_groups.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/event_groups.d" -MT"RTOS/Src/event_groups.o" -c -o "RTOS/Src/event_groups.o" "../RTOS/Src/event_groups.c"
+Finished building: ../RTOS/Src/event_groups.c
+ 
+Building file: ../RTOS/Src/heap_1.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/heap_1.d" -MT"RTOS/Src/heap_1.o" -c -o "RTOS/Src/heap_1.o" "../RTOS/Src/heap_1.c"
+../RTOS/Src/heap_1.c: In function 'pvPortMalloc':
+../RTOS/Src/heap_1.c:114: warning: cast from pointer to integer of different size
+Finished building: ../RTOS/Src/heap_1.c
+ 
+Building file: ../RTOS/Src/integer.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/integer.d" -MT"RTOS/Src/integer.o" -c -o "RTOS/Src/integer.o" "../RTOS/Src/integer.c"
+Finished building: ../RTOS/Src/integer.c
+ 
+Building file: ../RTOS/Src/list.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/list.d" -MT"RTOS/Src/list.o" -c -o "RTOS/Src/list.o" "../RTOS/Src/list.c"
+Finished building: ../RTOS/Src/list.c
+ 
+Building file: ../RTOS/Src/port.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/port.d" -MT"RTOS/Src/port.o" -c -o "RTOS/Src/port.o" "../RTOS/Src/port.c"
+Finished building: ../RTOS/Src/port.c
+ 
+Building file: ../RTOS/Src/queue.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/queue.d" -MT"RTOS/Src/queue.o" -c -o "RTOS/Src/queue.o" "../RTOS/Src/queue.c"
+Finished building: ../RTOS/Src/queue.c
+ 
+Building file: ../RTOS/Src/tasks.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"RTOS/Src/tasks.d" -MT"RTOS/Src/tasks.o" -c -o "RTOS/Src/tasks.o" "../RTOS/Src/tasks.c"
+../RTOS/Src/tasks.c: In function 'xTaskGenericCreate':
+../RTOS/Src/tasks.c:553: warning: cast from pointer to integer of different size
+../RTOS/Src/tasks.c:553: warning: cast to pointer from integer of different size
+../RTOS/Src/tasks.c: At top level:
+../RTOS/Src/tasks.c:415: warning: 'prvTaskIsTaskSuspended' declared 'static' but never defined
+Finished building: ../RTOS/Src/tasks.c
+ 
+Building file: ../Drivers/src/ADC.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/ADC.d" -MT"Drivers/src/ADC.o" -c -o "Drivers/src/ADC.o" "../Drivers/src/ADC.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/ADC.h:12,
+                 from ../Drivers/src/ADC.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Drivers/src/ADC.c
+ 
+Building file: ../Drivers/src/Keypad.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/Keypad.d" -MT"Drivers/src/Keypad.o" -c -o "Drivers/src/Keypad.o" "../Drivers/src/Keypad.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/Keypad.h:12,
+                 from ../Drivers/src/Keypad.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Drivers/src/Keypad.c
+ 
+Building file: ../Drivers/src/LCD.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/LCD.d" -MT"Drivers/src/LCD.o" -c -o "Drivers/src/LCD.o" "../Drivers/src/LCD.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h:12,
+                 from ../Drivers/src/LCD.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Drivers/src/LCD.c: In function 'LCD_DispInt':
+../Drivers/src/LCD.c:110: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+../Drivers/src/LCD.c:110: warning: format '%u' expects type 'unsigned int', but argument 3 has type 'u32'
+../Drivers/src/LCD.c: In function 'LCD_DispHex':
+../Drivers/src/LCD.c:115: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+../Drivers/src/LCD.c:115: warning: format '%x' expects type 'unsigned int', but argument 3 has type 'u32'
+Finished building: ../Drivers/src/LCD.c
+ 
+Building file: ../Drivers/src/board.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/board.d" -MT"Drivers/src/board.o" -c -o "Drivers/src/board.o" "../Drivers/src/board.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/board.h:12,
+                 from ../Drivers/src/board.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Drivers/src/board.c
+ 
+Building file: ../Drivers/src/uart.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/uart.d" -MT"Drivers/src/uart.o" -c -o "Drivers/src/uart.o" "../Drivers/src/uart.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/uart.h:12,
+                 from ../Drivers/src/uart.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Drivers/src/uart.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/uart.h:12,
+                 from ../main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:23: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+../main.c:25: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+Finished building: ../main.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26134 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1384 bytes (67.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:55:16 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26134 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1384 bytes (67.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:56:52 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/uart.h:12,
+                 from ../main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'system_int':
+../main.c:42: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+Finished building: ../main.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26106 bytes (79.7% Full)
+(.text + .data + .bootloader)
+
+Data:       1368 bytes (66.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:46:23 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h:12,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'system_int':
+../main.c:38: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+Finished building: ../main.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26086 bytes (79.6% Full)
+(.text + .data + .bootloader)
+
+Data:       1368 bytes (66.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:07:15 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h:12,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'system_int':
+../main.c:46: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+Finished building: ../main.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26154 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1370 bytes (66.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:09:37 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../Drivers/src/Keypad.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/Keypad.d" -MT"Drivers/src/Keypad.o" -c -o "Drivers/src/Keypad.o" "../Drivers/src/Keypad.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/Keypad.h:12,
+                 from ../Drivers/src/Keypad.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Drivers/src/Keypad.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26154 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1370 bytes (66.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:49:06 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../Drivers/src/Keypad.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/Keypad.d" -MT"Drivers/src/Keypad.o" -c -o "Drivers/src/Keypad.o" "../Drivers/src/Keypad.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/Keypad.h:12,
+                 from ../Drivers/src/Keypad.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Drivers/src/Keypad.c: In function 'Key_GetKey':
+../Drivers/src/Keypad.c:49: warning: implicit declaration of function 'vTaskDelay'
+Finished building: ../Drivers/src/Keypad.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h:12,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'system_int':
+../main.c:48: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+Finished building: ../main.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26164 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1370 bytes (66.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:50:35 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h:12,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'system_int':
+../main.c:48: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+../main.c: In function 'T_T2':
+../main.c:67: warning: large integer implicitly truncated to unsigned type
+Finished building: ../main.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26164 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1370 bytes (66.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:52:02 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../Drivers/src/Keypad.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/Keypad.d" -MT"Drivers/src/Keypad.o" -c -o "Drivers/src/Keypad.o" "../Drivers/src/Keypad.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/Keypad.h:12,
+                 from ../Drivers/src/Keypad.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Drivers/src/Keypad.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26154 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1370 bytes (66.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:55:09 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../Drivers/src/Keypad.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/Keypad.d" -MT"Drivers/src/Keypad.o" -c -o "Drivers/src/Keypad.o" "../Drivers/src/Keypad.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/Keypad.h:12,
+                 from ../Drivers/src/Keypad.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Drivers/src/Keypad.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26154 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1370 bytes (66.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:55:15 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26154 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1370 bytes (66.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:56:11 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../Drivers/src/Keypad.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Drivers/src/Keypad.d" -MT"Drivers/src/Keypad.o" -c -o "Drivers/src/Keypad.o" "../Drivers/src/Keypad.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/Keypad.h:12,
+                 from ../Drivers/src/Keypad.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Drivers/src/Keypad.c: In function 'Key_GetKey':
+../Drivers/src/Keypad.c:49: warning: implicit declaration of function 'vTaskDelay'
+Finished building: ../Drivers/src/Keypad.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26164 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1370 bytes (66.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:10:57 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h:12,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'system_int':
+../main.c:48: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+../main.c: In function 'T_T2':
+../main.c:67: warning: large integer implicitly truncated to unsigned type
+Finished building: ../main.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26164 bytes (79.8% Full)
+(.text + .data + .bootloader)
+
+Data:       1370 bytes (66.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
