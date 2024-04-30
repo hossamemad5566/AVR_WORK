@@ -3,7 +3,7 @@
 #define F_CPU 16000000UL // clock speed is 16MHz
 
 #endif
-
+#include "uart.h"
 #include "LCD.h"
 #include "board.h"
 #include "Keypad.h"
@@ -23,7 +23,7 @@ void T_T3(void *pvParameter);
 
 
 /*xSemaphoreHandle : DATA TYPE FOR SEMAPHORE*/
-xSemaphoreHandle BsEventKeyPressed = NULL;
+xSemaphoreHandle BmUART = NULL;
 /*this line to define pointer to the shared event */
  
 
@@ -31,7 +31,7 @@ int main(void)
 {
 	system_int();
 	/*create semaphore for the event */
-	BsEventKeyPressed = xSemaphoreCreateBinary();
+	BmUART = xSemaphoreCreateMutex();
 
 	xTaskCreate(T_T1,NULL,100,NULL,2,NULL);
 	xTaskCreate(T_T2,NULL,100,NULL,3,NULL);
@@ -43,33 +43,38 @@ int main(void)
 }
 void system_int (void)
 {
+	Uart_Init(9600);
 	Leds_AllInit();
 	LCD_Init();
 	LCD_DispStrXY(1,1,"started");
 	Key_Init();
+	Uart_SendStr("Res App:");
 }
 
 void T_T1(void *pvParameter)
 {
 	while(1)
 	{
-		if(Key_GetKey())
+		if(xSemaphoreTake(BmUART,portMAX_DELAY));
 		{
-			xSemaphoreGive(BsEventKeyPressed);
+			Uart_SendStr("AT+SMS1\r\n");
+			Uart_SendStr("AT+SMS2\r\n");
+			xSemaphoreGive(BmUART);
 		}
-		vTaskDelay(50);
+		
 	}
 }
 void T_T2(void *pvParameter)
 {
 	while(1)
 	{
-		if(xSemaphoreTake(BsEventKeyPressed,1000000))
+		if(xSemaphoreTake(BmUART,portMAX_DELAY));
 		{
-			Led_Toggle(LED_BLUE);
+			Uart_SendStr("AT+Server1\r\n");
+			Uart_SendStr("AT+Server2\r\n");
+			xSemaphoreGive(BmUART);
 		}
-		vTaskDelay(1000);
-
+		vTaskDelay(5);
 	}
 }
 void T_T3(void *pvParameter)

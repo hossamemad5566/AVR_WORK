@@ -1,8 +1,9 @@
 main.o main.o: ../main.c \
-  D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h \
+  D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/uart.h \
   D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h \
   D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/data_types.h \
   D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/bit_handle.h \
+  D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h \
   D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/board.h \
   D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/Keypad.h \
   D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc/FreeRTOS.h \
@@ -20,13 +21,15 @@ main.o main.o: ../main.c \
   D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc/timers.h \
   D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc/task.h
 
-D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h:
+D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/uart.h:
 
 D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:
 
 D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/data_types.h:
 
 D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/bit_handle.h:
+
+D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/LCD.h:
 
 D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/board.h:
 

@@ -34235,3 +34235,895 @@ Data:       1370 bytes (66.9% Full)
 
 Finished building: sizedummy
  
+14:36:53 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/uart.h:12,
+                 from ../main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'system_int':
+../main.c:46: error: too few arguments to function 'Uart_Init'
+../main.c:49: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+../main.c:51: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c:52: error: expected ';' before '}' token
+../main.c: In function 'T_T1':
+../main.c:60: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c:61: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c: In function 'T_T2':
+../main.c:73: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c:74: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:37:10 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/uart.h:12,
+                 from ../main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'system_int':
+../main.c:46: error: too few arguments to function 'Uart_Init'
+../main.c:49: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+../main.c:51: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c: In function 'T_T1':
+../main.c:60: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c:61: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c: In function 'T_T2':
+../main.c:73: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c:74: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:37:36 **** Incremental Build of configuration Debug for project RTOSapp ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\01_embedded\AVR\mine_work\RTOSapps\FreeRTOS\Inc" -I"D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/includes.h:16,
+                 from D:\01_embedded\AVR\mine_work\RTOSapps\Drivers\inc/uart.h:12,
+                 from ../main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'system_int':
+../main.c:49: warning: pointer targets in passing argument 3 of 'LCD_DispStrXY' differ in signedness
+../main.c:51: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c: In function 'T_T1':
+../main.c:60: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c:61: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c: In function 'T_T2':
+../main.c:73: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+../main.c:74: warning: pointer targets in passing argument 1 of 'Uart_SendStr' differ in signedness
+Finished building: ../main.c
+ 
+Building target: RTOSapp.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOSapp.map -mmcu=atmega32 -o "RTOSapp.elf"  ./RTOS/Src/PollQ.o ./RTOS/Src/croutine.o ./RTOS/Src/event_groups.o ./RTOS/Src/heap_1.o ./RTOS/Src/integer.o ./RTOS/Src/list.o ./RTOS/Src/port.o ./RTOS/Src/queue.o ./RTOS/Src/tasks.o  ./Drivers/src/ADC.o ./Drivers/src/Keypad.o ./Drivers/src/LCD.o ./Drivers/src/board.o ./Drivers/src/uart.o  ./main.o   
+Finished building target: RTOSapp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOSapp.elf  >"RTOSapp.lss"
+Finished building: RTOSapp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOSapp.elf  "RTOSapp.hex"
+Finished building: RTOSapp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex RTOSapp.elf  "RTOSapp.eep"
+Finished building: RTOSapp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOSapp.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   26286 bytes (80.2% Full)
+(.text + .data + .bootloader)
+
+Data:       1426 bytes (69.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:25:12 **** Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../DIO_Prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DIO_Prog.d" -MT"DIO_Prog.o" -c -o "DIO_Prog.o" "../DIO_Prog.c"
+Finished building: ../DIO_Prog.c
+ 
+Building file: ../GIE_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"GIE_prog.d" -MT"GIE_prog.o" -c -o "GIE_prog.o" "../GIE_prog.c"
+Finished building: ../GIE_prog.c
+ 
+Building file: ../LCD_Prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LCD_Prog.d" -MT"LCD_Prog.o" -c -o "LCD_Prog.o" "../LCD_Prog.c"
+In file included from ../LCD_Interface.h:17,
+                 from ../LCD_Prog.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD_Prog.c: In function 'H_Lcd_Void_LCDWriteString':
+../LCD_Prog.c:143: warning: comparison between pointer and integer
+Finished building: ../LCD_Prog.c
+ 
+Building file: ../LED_Prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LED_Prog.d" -MT"LED_Prog.o" -c -o "LED_Prog.o" "../LED_Prog.c"
+In file included from ../LED_Interface.h:17,
+                 from ../LED_Prog.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LED_Prog.c
+ 
+Building file: ../PushButton_Config.h PushButton_Interface.h PushButton_Private.h PushButton_Prog.c STD.h UART_Config.h UART_Interface.h UART_Private.h UART_Prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"PushButton_Config.h PushButton_Interface.h PushButton_Private.h PushButton_Prog.c STD.h UART_Config.h UART_Interface.h UART_Private.h UART_Prog.d" -MT"PushButton_Config.h PushButton_Interface.h PushButton_Private.h PushButton_Prog.c STD.h UART_Config.h UART_Interface.h UART_Private.h UART_Prog.o" -c -o "PushButton_Config.h PushButton_Interface.h PushButton_Private.h PushButton_Prog.c STD.h UART_Config.h UART_Interface.h UART_Private.h UART_Prog.o" "../PushButton_Config.h PushButton_Interface.h PushButton_Private.h PushButton_Prog.c STD.h UART_Config.h UART_Interface.h UART_Private.h UART_Prog.c"
+Finished building: ../PushButton_Config.h PushButton_Interface.h PushButton_Private.h PushButton_Prog.c STD.h UART_Config.h UART_Interface.h UART_Private.h UART_Prog.c
+ 
+Building file: ../PushButton_Prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"PushButton_Prog.d" -MT"PushButton_Prog.o" -c -o "PushButton_Prog.o" "../PushButton_Prog.c"
+In file included from ../PushButton_Interface.h:17,
+                 from ../PushButton_Prog.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../PushButton_Prog.c
+ 
+Building file: ../UART_Prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"UART_Prog.d" -MT"UART_Prog.o" -c -o "UART_Prog.o" "../UART_Prog.c"
+Finished building: ../UART_Prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'setup':
+../main.c:28: error: 'UART_CallBackFunction' undeclared (first use in this function)
+../main.c:28: error: (Each undeclared identifier is reported only once
+../main.c:28: error: for each function it appears in.)
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:25:47 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12184 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         22 bytes (1.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:31:04 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:44: error: lvalue required as left operand of assignment
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:31:14 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12190 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         22 bytes (1.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:32:16 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:47: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:48: error: expected ';' before '}' token
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:32:20 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:47: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12202 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:34:10 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12202 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:35:02 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:47: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12198 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:35:09 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:47: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12192 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:37:43 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:49: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12440 bytes (38.0% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:39:24 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:45: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:49: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12200 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:40:42 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:47: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12192 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:40:54 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:47: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12196 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:42:50 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:47: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12202 bytes (37.2% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:48:49 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:45: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:52: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12236 bytes (37.3% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:51:26 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:45: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:52: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12230 bytes (37.3% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:52:11 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:45: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:53: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12236 bytes (37.3% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:54:13 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:45: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:54: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12240 bytes (37.4% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:56:23 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:45: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:55: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12246 bytes (37.4% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:58:55 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../UART_Prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"UART_Prog.d" -MT"UART_Prog.o" -c -o "UART_Prog.o" "../UART_Prog.c"
+Finished building: ../UART_Prog.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12246 bytes (37.4% Full)
+(.text + .data + .bootloader)
+
+Data:         26 bytes (1.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:03:16 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:48: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:57: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:65: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c: At top level:
+../main.c:78: error: expected identifier or '(' before '}' token
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+15:03:38 **** Incremental Build of configuration Debug for project Autosar1 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.h:3,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:48: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:57: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+../main.c:65: warning: pointer targets in passing argument 1 of 'H_Lcd_Void_LCDWriteString' differ in signedness
+Finished building: ../main.c
+ 
+Building target: Autosar1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Autosar1.map -mmcu=atmega32 -o "Autosar1.elf"  ./DIO_Prog.o ./GIE_prog.o ./LCD_Prog.o ./LED_Prog.o ./PushButton_Config.h\ PushButton_Interface.h\ PushButton_Private.h\ PushButton_Prog.c\ STD.h\ UART_Config.h\ UART_Interface.h\ UART_Private.h\ UART_Prog.o ./PushButton_Prog.o ./UART_Prog.o ./main.o   
+Finished building target: Autosar1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Autosar1.elf  >"Autosar1.lss"
+Finished building: Autosar1.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Autosar1.elf  "Autosar1.hex"
+Finished building: Autosar1.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Autosar1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12258 bytes (37.4% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
